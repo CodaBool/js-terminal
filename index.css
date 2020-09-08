@@ -1,0 +1,125 @@
+body {
+  font-family: 'Aldrich', monospace;
+  text-shadow: 0 0 0px #C8C8C8;
+  background-color: rgb(26, 26, 26);
+  animation: glow 1s ease-in-out infinite alternate;
+  color: white;
+}
+::selection {
+  background-color: rgb(180, 180, 180);
+  color: rgb(0, 73, 0);
+}
+
+#prompt {
+  height: 130px;
+  user-select: none;
+  
+  padding: 0 0 20px 0;
+}
+
+#prompt h2 {
+  color: rgb(108, 148, 108);
+}
+
+#time {
+  width: 70px;
+  margin: 2px 0 0 0;
+}
+
+#prompt img {
+  width: 120;
+  height: 120;
+  float: left;  
+  user-select: none;
+  margin: 0 10px 0 0;
+}
+
+#userName {
+  color: rgb(118, 180, 118);
+  margin: 0 8px 0 0;
+  padding: 5px 0 0 0;
+}
+
+#input {
+  background-color: transparent;
+  color: white;
+  caret-color: rgb(118, 180, 118);
+  font-variant: small-caps;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 900px;
+}
+
+#fakeCaret {
+  border-right: 0.5em solid rgb(118, 180, 118);
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to { visibility: hidden; }
+}
+
+/* From the terminal css */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(rgba(0,0,0, 0.22), rgba(0,0,0, 0.2) , transparent 10px, transparent 12px );
+  pointer-events: none;
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.55; }
+  5% { opacity: 0.5; }
+  10% { opacity: 0.45; }
+  15% { opacity: 0.5; }
+  20% { opacity: 0.55; }
+  25% { opacity: 0.5; }
+  30% { opacity: 0.45; }
+  35% { opacity: 0.4; }
+  40% { opacity: 0.35; }
+  45% { opacity: 0.4; }
+  50% { opacity: 0.5; }
+  55% { opacity: 0.6; }
+  60% { opacity: 0.7; }
+  65% { opacity: 0.6; }
+  70% { opacity: 0.5; }
+  75% { opacity: 0.4; }
+  80% { opacity: 0.3; }
+  85% { opacity: 0.4; }
+  90% { opacity: 0.45; }
+  95% { opacity: 0.5; }
+  100% { opacity: 0.5; }
+}
+
+.morph-section {
+  position: absolute;
+  left: 35%;
+  top: 15%;
+  font-family: monospace;
+  color: rgba(27, 139, 42, 0.3);
+  user-select: none;
+  overflow: hidden;
+}
+
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px rgba(176, 196, 222, 0.212);
+  }
+  
+  to {
+    text-shadow: 0 0 4px rgba(176, 196, 222, 0.301);
+  }
+}

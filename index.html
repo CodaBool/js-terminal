@@ -1,0 +1,42 @@
+<html>
+    <head>     
+        <meta charset="UTF-8">
+        <title>Douglas Moore Terminal</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+
+        <!-- Flavicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-16x16.gif" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-32x32.gif" />
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet"> 
+    </head>
+  <body>
+    <div id="prompt">
+      <img src="./assets/5.gif" />
+      <h2>Your Terminal</h2>
+      <div style="display: flex;">
+        <span id="time"></span>
+        <span id="emoji"></span>
+      </div>
+      <p>Enter "help" for more information.</p>
+    </div>
+    <div id="output"></div>
+    <pre class="morph-section"></pre>
+    <div style="display: flex;">
+      <div id="userName">[user@HTML5] # </div>
+      <table>
+        <tr>
+          <td id="input" contenteditable="true" spellcheck="false"></td>
+          <td>
+            <span id="fakeCaret"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="morph.js"></script>
+    <script src="index.js"></script> 
+  </body>
+</html>
